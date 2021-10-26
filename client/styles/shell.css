@@ -1,0 +1,61 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: [input]1fr [output]1fr;
+}
+
+body {
+    /* height: 100%; */
+    width: 100%;
+    display: grid;
+    grid-template-rows: [header]0.1fr [main]0.8fr [footer]0.1fr;
+    background-color: var(--light-brown, hotpink);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    height: auto
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+}
+
+fieldset > div {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+#section-bakers-output {
+    display: flex;
+    width: 100%;
+}

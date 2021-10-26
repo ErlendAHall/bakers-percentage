@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bakers Percentage</title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5eddf" />
+
+    <link rel="stylesheet" href="styles/vars.css" />
+    <link rel="stylesheet" href="styles/shell.css" />
+  </head>
+  <body>
+    <script src="components/registry.js" type="module"></script>
+    <header><h1>Bakers Percentage Portal</h1></header>
+    <main>
+      <section>
+        <form id="ingredients-form">
+          <fieldset id="ingredients">
+            <div role="group">
+              <bakers-input type="number" label="Dry ingredients"></bakers-input>
+              <bakers-unit-dropdown></bakers-unit-dropdown>
+            </div>
+            <div role="group">
+              <bakers-input type="number" label="Wet ingredients"></bakers-input>
+              <bakers-unit-dropdown></bakers-unit-dropdown>
+            </div>
+            <div role="group">
+              <bakers-input type="number" label="Salt"></bakers-input>
+              <bakers-unit-dropdown></bakers-unit-dropdown>
+            </div>
+            <div role="group">
+              <bakers-input type="number" label="Leaven"></bakers-input>
+              <bakers-unit-dropdown></bakers-unit-dropdown>
+            </div>
+
+          </fieldset>
+        </form>
+      </section>
+      <section id="section-bakers-output">
+        <bakers-output></bakers-output>
+      </section>
+    </main>
+  </body>
+  <footer></footer>
+  <!-- TEMPLATES -->
+  <template id="bakers-output">
+    <output>
+      Hydration: <strong></strong>
+    </output>
+  </template>
+  <template id="bakers-unit-dropdown" form="ingredients-form">
+    <select class="unit-dropdown">
+      <option>oz.</option>
+      <option>grams</option>
+    </select>
+  </template>
+  <!-- TEMPLATES -->
+</html>
